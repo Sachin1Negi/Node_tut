@@ -113,7 +113,7 @@
 // console.log( `current directory is : ${p} , save this location for future reference`)
 
 //////////////////////////////////////////////////////////////////////////////////////
-//express : install it before use, "npm i express"
+//express : install it before use, "npm i express"  //else error: cannot find express module.
 
 const express = require('express')
 const app = express(); //executable
@@ -138,8 +138,18 @@ let epath = path.join(__dirname, 'public');
 // console.log('.');
 // console.log(epath);
 
-app.get('/hello', (req, resp) =>{
-    resp.sendFile(`${epath}/home.html`); //when you write ./ here it only takes it as a string
-    //and not as the path for root directory.
-})
-app.listen(5000);
+    // app.get('/hello', (req, resp) =>{
+    //     resp.sendFile(`${epath}/home.html`); //when you write ./ here it only takes it as a string
+    //     //and not as the path for root directory.
+    // })
+    // app.listen(5000);
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+    // const dateTimeObject = new Date();
+
+    // console.log(`Date: ${dateTimeObject.toDateString()}`);
+    // console.log(`Time: ${dateTimeObject.toTimeString()}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Date: Sun Aug 13 2023
+// Time: 09:12:45 GMT+0530 (India Standard Time)
